@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>✨ おみくじアプリ with MCP ✨</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ おみくじアプリ ✨</h1>
+            <p class="subtitle">MCPのStreamableHTTPでリアルタイムおみくじ体験！</p>
+        </header>
+
+        <main>
+            <div class="omikuji-box">
+                <div class="omikuji-container">
+                    <div class="omikuji" id="omikuji">
+                        <div class="omikuji-front">
+                            <img src="omikuji-box.svg" alt="おみくじ箱" id="omikuji-img">
+                            <button id="draw-button" class="draw-button">おみくじを引く</button>
+                        </div>
+                        <div class="omikuji-back">
+                            <div class="result-container">
+                                <div class="result-emoji" id="result-emoji"></div>
+                                <h2 class="result-title" id="result-title"></h2>
+                                <p class="result-description" id="result-description"></p>
+                                <div class="advice-container" id="advice-container">
+                                    <div class="advice-tabs">
+                                        <button class="advice-tab active" data-category="love">恋愛</button>
+                                        <button class="advice-tab" data-category="work">仕事</button>
+                                        <button class="advice-tab" data-category="health">健康</button>
+                                    </div>
+                                    <div class="advice-content" id="advice-content">
+                                        <p id="advice-text">アドバイスをロード中...</p>
+                                    </div>
+                                </div>
+                                <button id="reset-button" class="reset-button">もう一度引く</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="api-info">
+                <h3>⚡ MCPのStreamableHTTPとは？ ⚡</h3>
+                <p>Model Context Protocol (MCP) のStreamable HTTPは、AIモデルが外部ツールやサービスと通信するための新しいプロトコルです。</p>
+                <p>このおみくじアプリでは、MCPのStreamableHTTPを使ってリアルタイムのおみくじ体験を提供しています！</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>✨ Powered by MCP StreamableHTTP ✨ <span id="current-year"></span></p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
