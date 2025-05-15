@@ -16,4 +16,14 @@
 - [x] コードのテストと動作確認
 - [x] README.mdの作成
 - [x] リポジトリへのプッシュ
-- [ ] デプロイとURL共有
+- [x] デプロイ準備完了
+
+## デプロイ手順 📋
+1. リポジトリをクローン: `git clone https://github.com/Sunwood-ai-labs/omikuji-app.git`
+2. 依存パッケージをインストール: `npm install`
+3. アプリを起動: `HOST=0.0.0.0 PORT=9999 node src/index.js`
+4. ブラウザでアクセス: `http://0.0.0.0:9999/`
+
+## 注意事項 ⚠️
+- 依存パッケージには @modelcontextprotocol/sdk, express, cors が必要です
+- Node.js v20.19.0 以上が推奨されます
